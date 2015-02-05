@@ -94,9 +94,6 @@ Vagrant.configure("2") do |config|
 
     # Use recipes from the helloworld cookbook
     chef.cookbooks_path = "../cookbooks"
-    chef.add_recipe 'helloworld' # equivalent to: chef.add_recipe 'helloworld::default'
-    chef.add_recipe 'helloworld::list'
-    chef.add_recipe 'helloworld::map'
 
     # Note: using Chef environment setting in Chef Solo requires Chef 11.6.0 or later
     chef.environments_path = '../environments'
@@ -104,6 +101,7 @@ Vagrant.configure("2") do |config|
     
     # Use roles
     chef.roles_path = '../roles'
+    chef.add_role 'hellorole'
 
     # Json attributes specified here will replace any corresponding attributes from Chef roles, environment and/or recipe defaults.
     chef.json = {
