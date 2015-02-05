@@ -102,7 +102,10 @@ Vagrant.configure("2") do |config|
     chef.environments_path = '../environments'
     chef.environment = 'vagrant'
     
-    # Json attributes specified here will replace any corresponding attributes from the recipe defaults.
+    # Use roles
+    chef.roles_path = '../roles'
+
+    # Json attributes specified here will replace any corresponding attributes from Chef roles, environment and/or recipe defaults.
     chef.json = {
       :helloworld => {
 #        :message => 'hello chef world node json message',
