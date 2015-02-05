@@ -100,13 +100,14 @@ Vagrant.configure("2") do |config|
 
     # Note: using Chef environment setting in Chef Solo requires Chef 11.6.0 or later
     chef.environments_path = '../environments'
+    chef.environment = 'vagrant'
     
     # Json attributes specified here will replace any corresponding attributes from the recipe defaults.
     chef.json = {
       :helloworld => {
-        :message => 'hello chef world node json message',
-        :messages => ['node json message one', 'node json message two'],
-        :properties => { :key1 => 'node json value 1', :key2 => 'node json value 2'}
+#        :message => 'hello chef world node json message',
+#        :messages => ['node json message one', 'node json message two'],
+#        :properties => { :key1 => 'node json value 1', :key2 => 'node json value 2'}
       }
     }
   end
