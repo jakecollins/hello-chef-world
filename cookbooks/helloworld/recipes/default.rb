@@ -13,6 +13,6 @@ end
 
 template '/opt/helloworld/scripts/hellochef' do
   source '/opt/helloworld/scripts/helloworld.erb'
-  variables :message => 'hello chef world!'
+  variables :message => node['helloworld']['message']
   mode '0755'
 end

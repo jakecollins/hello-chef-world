@@ -5,6 +5,6 @@ include_recipe 'helloworld::default' # This recipe depends on the default recipe
 
 template '/opt/helloworld/scripts/hellolist' do
   source '/opt/helloworld/scripts/list.erb'
-  variables :messages => ['message one', 'message two']
+  variables :messages => node['helloworld']['messages']
   mode '0755'
 end

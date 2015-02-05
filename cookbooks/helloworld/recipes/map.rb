@@ -5,6 +5,6 @@ include_recipe 'helloworld::default' # This recipe depends on the default recipe
 
 template '/opt/helloworld/scripts/hellomap' do
   source '/opt/helloworld/scripts/map.erb'
-  variables :properties => { :key1 => 'value 1', :key2 => 'value 2'}
+  variables :properties => node['helloworld']['properties']
   mode '0755'
 end
