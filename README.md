@@ -8,3 +8,5 @@ to use Chef with Vagrant. Each example builds on the ideas in the previous examp
 * Example 2 - Start using environments.
 
 * Example 3 - Start using roles.
+
+* Example 4 - Start using rubocop.
