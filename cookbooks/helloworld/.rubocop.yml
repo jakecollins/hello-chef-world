@@ -1,0 +1,5 @@
+inherit_from: .rubocop_todo.yml
+
+# Default max of 80 is too short
+Metrics/LineLength:
+  Max: 120
