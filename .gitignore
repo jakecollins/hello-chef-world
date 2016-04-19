@@ -18,3 +18,4 @@ generated/
 .DS_Store
 
 Gemfile.lock
+Berksfile.lock
