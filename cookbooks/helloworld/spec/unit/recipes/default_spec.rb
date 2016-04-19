@@ -3,7 +3,8 @@ require 'spec_helper'
 # chefspec examples: https://github.com/sethvargo/chefspec/tree/master/examples
 
 describe 'helloworld::default' do
-  let :chef_run do
+  # see https://github.com/sethvargo/chefspec#faster-specs for let vs cached.
+  cached :chef_run do
     runner = ChefSpec::ServerRunner.new
     runner.converge(described_recipe)
   end
