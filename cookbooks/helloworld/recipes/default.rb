@@ -1,6 +1,9 @@
 # Defines the default recipe in the helloworld cookbook.
 # The recipe installs a .bash_profile file for the vagrant user and also a script called hellochef.
 
+# Ensure that apt cookbook default recipe gets run before anything else happens.
+include_recipe 'apt'
+
 cookbook_file '/home/vagrant/.bash_profile' do
   source '/home/vagrant/.bash_profile'
   owner 'vagrant'

@@ -88,12 +88,13 @@ Vagrant.configure("2") do |config|
 
   config.omnibus.chef_version = '11.6.0' # Using Chef 11.6.0 ensures that the environment setting can be used, see below.
 
+  # Configure Vagrant Berkshelf plugin, see https://github.com/berkshelf/vagrant-berkshelf
+  config.berkshelf.berksfile_path = "../cookbooks/helloworld/Berksfile"
+  config.berkshelf.enabled = true
+
   config.vm.provision :chef_solo do |chef|
 
     chef.custom_config_path = "solo-include.rb" # This makes Vagrant include the custom config into the generated solo.rb
-
-    # Use recipes from the helloworld cookbook
-    chef.cookbooks_path = "../cookbooks"
 
     # Note: using Chef environment setting in Chef Solo requires Chef 11.6.0 or later
     chef.environments_path = '../environments'
