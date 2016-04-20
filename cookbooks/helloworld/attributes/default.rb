@@ -5,4 +5,4 @@ default['helloworld']['message'] = 'hello chef world default message!'
 default['helloworld']['messages'] = ['default message one', 'default message two']
 default['helloworld']['properties'] = { key1: 'default value 1', key2: 'default value 2' }
 
-default['helloworld']['nginx_version'] = '1.8.1-1+precise0'
+default['helloworld']['nginx_version'] = '1.10.1-3+precise3'

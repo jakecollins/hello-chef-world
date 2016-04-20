@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rubocop'
 gem 'berkshelf'
 gem 'chefspec'
+gem 'kitchen-vagrant'
+gem 'rubocop'
+gem 'test-kitchen'

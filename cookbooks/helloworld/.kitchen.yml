@@ -15,3 +15,12 @@ suites:
   - name: default
     run_list:
       - recipe[helloworld::default]
+      - recipe[helloworld::nginx]
+      - recipe[minitest-handler]
+    attributes:
+      helloworld:
+        message: 'Hello from the kitchen'
+      minitest:
+        recipes:
+          - helloworld
+          - helloworld::nginx

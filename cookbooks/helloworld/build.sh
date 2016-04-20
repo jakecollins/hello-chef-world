@@ -8,7 +8,7 @@ rm -f Gemfile.lock
 bundle install
 
 # Perform static code analysis. This generates .rubocop_todo.yml, a list of violations to fix.
-bundle exec rubocop --auto-gen-config
+bundle exec rubocop
 
 # Install dependencies
 rm -f Berksfile.lock
