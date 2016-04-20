@@ -3,3 +3,5 @@ source 'https://supermarket.chef.io' # Community cookbook Berkshelf server
 
 # Tell Berkshelf to obtain any cookbooks declared in metadata.rb
 metadata
+
+cookbook 'minitest-handler'
